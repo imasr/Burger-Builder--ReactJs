@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import Auxl from "../../hoc/Auxl";
+import Wrapper from "../../hoc/Wrapper";
 import Burger from "../../components/Burger/Burger";
 
 export class BurgerBuilder extends Component {
     render() {
         return (
-            <Auxl>
+            <Wrapper>
                 <Burger />
-            </Auxl>
+            </Wrapper>
         )
     }
 }

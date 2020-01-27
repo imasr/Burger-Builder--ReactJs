@@ -4,14 +4,19 @@ import PropTypes from 'prop-types';
 import Classes from './Burger-Ingredient.module.scss';
 
 class BurgerIngredient extends Component {
+    ingTypes = {
+        'bread-bottom': 'BreadBottom',
+        'cheese': 'Cheese',
+        'meat': 'Meat',
+        'bread': 'Bread',
+        'bacon': 'Bacon',
+    }
 
     render() {
         let ingredients = null
+        console.log(this.ingTypes[this.props.type]);
 
         switch (this.props.type) {
-            case ('bread-bottom'):
-                ingredients = <div className={Classes.BreadBottom}></div>
-                break
             case ('bread-top'):
                 ingredients = (
                     <div className={Classes.BreadTop}>
@@ -20,17 +25,8 @@ class BurgerIngredient extends Component {
                     </div>
                 )
                 break
-            case ('meat'):
-                ingredients = <div className={Classes.Meat}></div>
-                break
-            case ('cheese'):
-                ingredients = <div className={Classes.Cheese}></div>
-                break
-            case ('bread'):
-                ingredients = <div className={Classes.Salad}></div>
-                break
-            case ('bacon'):
-                ingredients = <div className={Classes.Bacon}></div>
+            case (this.props.type):
+                ingredients = <div className={Classes[this.ingTypes[this.props.type]]}></div>
                 break
             default:
                 ingredients = null

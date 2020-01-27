@@ -4,7 +4,7 @@ import Classes from './Burger.module.scss';
 
 import BurgerIngredient from './Burger-Ingredient/Burger-Ingredient'
 
-const burger = (props) => {
+const burger = () => {
     return (
         <div className={Classes.Burger}>
             <BurgerIngredient type="bread-top" />

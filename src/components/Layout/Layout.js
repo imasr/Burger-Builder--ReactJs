@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Auxl from "../../hoc/Auxl";
+import Wrapper from "../../hoc/Wrapper";
 import { BurgerBuilder } from "../../containers/Burger-Builder/Burger-Builder";
 
 const layout = (props) => (
-    <Auxl>
+    <Wrapper>
         <div>Toolbar, Sidebar, Backdrop</div>
         < main><BurgerBuilder /></main>
-    </Auxl>
+    </Wrapper>
 )
 export default layout
