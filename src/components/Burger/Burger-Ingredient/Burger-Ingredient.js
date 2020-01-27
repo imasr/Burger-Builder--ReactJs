@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Classes from './Burger-Ingredient.module.scss';
 
 class BurgerIngredient extends Component {
+
     ingTypes = {
         'bread-bottom': 'BreadBottom',
         'cheese': 'Cheese',
@@ -14,8 +15,6 @@ class BurgerIngredient extends Component {
 
     render() {
         let ingredients = null
-        console.log(this.ingTypes[this.props.type]);
-
         switch (this.props.type) {
             case ('bread-top'):
                 ingredients = (
