@@ -5,13 +5,13 @@ import Classes from './Burger-Ingredient.module.scss';
 
 class BurgerIngredient extends Component {
 
-    ingTypes = {
-        'bread-bottom': 'BreadBottom',
-        'cheese': 'Cheese',
-        'meat': 'Meat',
-        'bread': 'Bread',
-        'bacon': 'Bacon',
-    }
+    ingTypes = Object.freeze({
+        cheese: 'Cheese',
+        meat: 'Meat',
+        bread: 'Bread',
+        bacon: 'Bacon',
+        salad: "Salad"
+    })
 
     render() {
         let ingredients = null
@@ -23,6 +23,10 @@ class BurgerIngredient extends Component {
                         <div className={Classes.Seeds2}></div>
                     </div>
                 )
+                break
+            case ('bread-bottom'):
+                ingredients = <div className={Classes.BreadBottom}></div>
+
                 break
             case (this.props.type):
                 ingredients = <div className={Classes[this.ingTypes[this.props.type]]}></div>
