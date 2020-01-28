@@ -38,7 +38,7 @@ export class BurgerBuilder extends Component {
         const oldCount = this.state.ingredients[type]
         const updatedCount = oldCount + 1
         let updatedIngredients = {
-            ... this.state.ingredients
+            ...this.state.ingredients
         }
         updatedIngredients[type] = updatedCount
 
@@ -56,7 +56,7 @@ export class BurgerBuilder extends Component {
         }
         const updatedCount = oldCount - 1
         let updatedIngredients = {
-            ... this.state.ingredients
+            ...this.state.ingredients
         }
         updatedIngredients[type] = updatedCount
 
@@ -74,7 +74,7 @@ export class BurgerBuilder extends Component {
     render() {
 
         let disabledInfo = {
-            ... this.state.ingredients
+            ...this.state.ingredients
         }
         for (let key in disabledInfo) {
             disabledInfo[key] = disabledInfo[key] <= 0
