@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import Wrapper from "../../hoc/Wrapper";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/Build-Controls/Build-Controls";
-
+import Modal from "../../components/UI/Modal/Modal";
+import OrderSummary from "../../components/Burger/Order-Summary/Order-Summary";
 export class BurgerBuilder extends Component {
-
+    modalmessage = "A Burger with Following ingredients"
     state = {
         ingredients: {
             cheese: 0,
@@ -15,7 +16,8 @@ export class BurgerBuilder extends Component {
             bread: 0
         },
         totalPrice: 0,
-        purchaseable: false
+        purchaseable: false,
+        purchasing: false
     }
 
     INGREDIENT_PRICE = {
@@ -67,7 +69,15 @@ export class BurgerBuilder extends Component {
         this.updatePurchase(updatedIngredients)
     }
 
-    orderHandler = () => {
+    initiatePurchasing = () => {
+        this.setState({ purchasing: true })
+    }
+
+    cancelPurchasing = () => {
+        this.setState({ purchasing: false })
+    }
+
+    continuePurchase = () => {
 
     }
 
@@ -82,15 +92,27 @@ export class BurgerBuilder extends Component {
 
         return (
             <Wrapper>
-                <Burger ingredients={this.state.ingredients} />
+                <Modal
+                    show={this.state.purchasing}
+                    modalClose={() => { }}>
+                    <OrderSummary
+                        title={'Order Summary'}
+                        message={this.modalmessage}
+                        ingredients={this.state.ingredients}
+                        totalPrice={this.state.totalPrice}
+                        continue={this.continuePurchase}
+                        cancel={this.cancelPurchasing} />
+                </Modal>
+                <Burger
+                    ingredients={this.state.ingredients} />
                 <BuildControls
                     totalPrice={this.state.totalPrice}
                     addIngredient={this.addIngredientHandler}
                     removeIngredient={this.removeIngredientHandler}
                     disabledInfo={disabledInfo}
                     purchaseable={this.state.purchaseable}
-                    orderNow={this.orderHandler} />
-            </Wrapper>
+                    orderNow={this.initiatePurchasing} />
+            </Wrapper >
         )
     }
 }
