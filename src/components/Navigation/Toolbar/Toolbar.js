@@ -4,11 +4,10 @@ import classes from "./Toolbar.module.scss";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import Logo from "../../Logo/Logo"
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
-import SideDrawer from "../SideDrawer/SideDrawer";
 
-const toolbar = () => (
+const toolbar = (props) => (
     <header className={classes.Toolbar}>
-        <DrawerToggle />
+        <DrawerToggle clicked={props.toggleSideDrawer} />
         <div className={classes.Logo}>
             <Logo />
         </div>
@@ -19,4 +18,4 @@ const toolbar = () => (
     </header>
 )
 
-export default toolbar
+export default toolbar  
