@@ -8,6 +8,8 @@ function App() {
   return (
     <div >
       <Layout>Test </Layout>
+
+      <Layout>Test </Layout>
     </div>
   );
 }
