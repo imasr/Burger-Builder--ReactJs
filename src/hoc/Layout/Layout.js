@@ -28,7 +28,8 @@ class Layout extends Component {
                 <Toolbar toggleSideDrawer={this.sideDrawerToggler} />
                 <SideDrawer show={this.state.showSideDrawer} close={this.sideDrawerClose} />
                 <main className={classes.Content}>
-                    <BurgerBuilder />
+                    {/* <BurgerBuilder /> */}
+                    {this.props.children}
                 </main>
             </Wrapper>
         )
