@@ -24,8 +24,8 @@ const orderSummary = (props) => {
             <strong>Total Price: {props.totalPrice}</strong>
             <p>Continue to Checkout?</p>
             <div className="rowReverse">
-                <Button btnType={'Danger'} click={props.cancel}>Cancel</Button>
-                <Button btnType={'Success'} click={props.continue}>Continue</Button>
+                <Button btnType={'Danger'} clicked={props.cancel}>Cancel</Button>
+                <Button btnType={'Success'} clicked={props.continue}>Continue</Button>
             </div>
 
         </Wrapper>
