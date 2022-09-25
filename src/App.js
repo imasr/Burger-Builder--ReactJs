@@ -6,6 +6,7 @@ import "./App.scss";
 import Layout from "./core/Layout/Layout";
 import { Checkout } from "./pages/Checkout/Checkout";
 import { BurgerBuilder } from "./pages/Burger-Builder/Burger-Builder";
+import { Login } from "./pages/Login/Login";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<BurgerBuilder />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Layout>
     </div>
