@@ -3,11 +3,11 @@ import React, { Component } from "react";
 import Wrapper from "../../hoc/Wrapper/Wrapper";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/Build-Controls/Build-Controls";
-import Modal from "../../shared/components/UI/Modal/Modal";
+import Modal from "../../shared/components/Modal/Modal";
 import OrderSummary from "../../components/Burger/Order-Summary/Order-Summary";
 
 import axios from "../../axios-orders";
-import Spinner from "../../shared/components/UI/Spinner/Spinner";
+import Spinner from "../../shared/components/Spinner/Spinner";
 export class BurgerBuilder extends Component {
   modalmessage = "A Burger with Following ingredients";
   state = {

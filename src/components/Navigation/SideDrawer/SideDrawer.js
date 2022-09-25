@@ -4,7 +4,7 @@ import classes from "./SideDrawer.module.scss";
 import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import Wrapper from "../../../hoc/Wrapper/Wrapper";
-import Backdrop from "../../../shared/components/UI/Backdrop/Backdrop";
+import Backdrop from "../../../shared/components/Backdrop/Backdrop";
 
 const sideDrawer = (props) => {
   let drawer = [classes.SideDrawer, classes.Close];

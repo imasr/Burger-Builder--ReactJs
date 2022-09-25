@@ -1,7 +1,7 @@
 import React from "react";
 
 import Burger from "../../Burger/Burger";
-import Button from "../../../shared/components/UI/Button/Button";
+import Button from "../../../shared/components/Button/Button";
 import classes from "./CheckoutSummary.module.scss";
 
 const checkoutSummary = (props) => {

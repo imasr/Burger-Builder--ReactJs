@@ -1,6 +1,6 @@
 import React from "react";
 import Wrapper from "../../../hoc/Wrapper/Wrapper";
-import Button from "../../../shared/components/UI/Button/Button";
+import Button from "../../../shared/components/Button/Button";
 
 const orderSummary = (props) => {
   console.log(props);
