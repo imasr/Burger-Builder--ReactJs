@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Wrapper from "../../hoc/Wrapper/Wrapper";
+import Wrapper from "../../core/Wrapper/Wrapper";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/Build-Controls/Build-Controls";
 import Modal from "../../shared/components/Modal/Modal";

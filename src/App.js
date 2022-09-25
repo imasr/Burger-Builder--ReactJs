@@ -3,9 +3,9 @@ import { Route, Routes } from "react-router-dom";
 
 import "./App.scss";
 
-import Layout from "./hoc/Layout/Layout";
-import { Checkout } from "./containers/Checkout/Checkout";
-import { BurgerBuilder } from "./containers/Burger-Builder/Burger-Builder";
+import Layout from "./core/Layout/Layout";
+import { Checkout } from "./pages/Checkout/Checkout";
+import { BurgerBuilder } from "./pages/Burger-Builder/Burger-Builder";
 
 function App() {
   return (
