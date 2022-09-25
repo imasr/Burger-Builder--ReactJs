@@ -1,3 +1,6 @@
-.Content{
-    margin-top: 72px;
+.Content {
+  margin-top: 56px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  width: 100%;
 }
