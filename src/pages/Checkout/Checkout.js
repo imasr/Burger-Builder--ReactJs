@@ -9,14 +9,15 @@ const state = {
     bacon: 1,
   },
 };
-const continueCheckoutHandler = () => {};
+const continueCheckoutHandler = () => {
+  console.log("continueCheckoutHandler");
+};
 const cancelCheckoutHandler = () => {
-  console.log("sss");
+  console.log("cancelCheckoutHandler");
   this.props.history.goBack();
 };
 
-export const Checkout = () => {
-  // render() {
+const Checkout = () => {
   return (
     <div>
       <CheckoutSummary
@@ -26,5 +27,5 @@ export const Checkout = () => {
       />
     </div>
   );
-  // }
 };
+export default Checkout;

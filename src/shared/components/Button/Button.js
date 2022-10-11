@@ -1,12 +1,14 @@
 import React from "react";
 import classes from "./Button.module.scss";
-
+import Button from "@mui/material/Button";
 const button = (props) => (
-    <button
-        onClick={props.clicked}
-        className={[classes.Button, classes[props.btnType]].join(' ')}>
-        {props.children}
-    </button>
-)
+  <Button
+    variant="contained"
+    onClick={props.clicked}
+    className={[classes.Button, classes[props.btnType]].join(" ")}
+  >
+    {props.children}
+  </Button>
+);
 
-export default button
+export default button;

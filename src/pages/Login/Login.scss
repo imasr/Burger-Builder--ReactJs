@@ -1,0 +1,29 @@
+.Login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 56px);
+  .form {
+    border: 1px solid gainsboro;
+    padding: 10px;
+  }
+  .p1 {
+    padding: 5px;
+  }
+  button {
+    width: 100%;
+  }
+  label {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  div {
+    width: 100%;
+    img {
+      text-align: center;
+      width: 48px;
+    }
+  }
+}
